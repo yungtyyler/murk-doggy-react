@@ -1,19 +1,16 @@
 import React from 'react';
-import MurkDoggyLogo from './app/assets/img/MURK_DOGGY_LOGO.png';
-import { Container, Navbar, NavbarBrand } from 'reactstrap';
+import { Route, Routes } from 'react-router-dom';
+import Header from './components/Header';
+import HomePage from './pages/HomePage';
 import './App.css';
 
 function App() {
   return (
     <div className="App">
-      <Navbar dark color='primary' sticky='top' expand='md'>
-          <Container>
-              <NavbarBrand href='/'>
-                  <img src={MurkDoggyLogo} alt='Murk Doggy logo' />
-              </NavbarBrand>
-          </Container>
-      </Navbar>
-      Murk Doggy Loyalty Program
+      <Header />
+      <Routes>
+        <Route path='/' element={ <HomePage /> }></Route>
+      </Routes>
     </div>
   );
 }
