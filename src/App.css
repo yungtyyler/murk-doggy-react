@@ -1,3 +1,11 @@
+:root {
+    --primary-color: #6a1b9a;
+    --secondary-color: #ffffff;
+    --accent-color: #000000;
+    --dark-grey: #969696;
+    --light-grey: #c8c6c6;
+}
+
 body {
     font-family: 'Open Sans', sans-serif;
 }
@@ -18,6 +26,15 @@ h2 {
     color: #3046c5;
 }
 
+a {
+    color: var(--dark-grey);
+    text-decoration: none;
+}
+
+a:hover {
+    color: var(--light-grey);
+}
+
 .card-img-overlay .card-title {
     color: white;
     background-color: rgba(0, 0, 0, 0.5);
@@ -30,9 +47,17 @@ h2 {
 }
 
 .site-footer {
-    background-image: linear-gradient(#cec8ff, white);
+    background-image: linear-gradient(to left, #c4f0ed, #7a74eaff, var(--primary-color));
     padding: 20px 0;
     margin-top: 2rem;
+}
+
+.btn-instagram {
+    background: #f09433; 
+    background: -moz-linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%); 
+    background: -webkit-linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%); 
+    background: linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%); 
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f09433', endColorstr='#bc1888',GradientType=1 );
 }
 
 .navbar-brand {
@@ -48,8 +73,8 @@ h2 {
 }
 
 .navbar-dark {
-    background-color: #d9c85b;
-    background-image: linear-gradient(to right, #e5dbb1, #d9c85b, #c9931c);
+    background-color: var(--primary-color);
+    background-image: linear-gradient(to right, #c4f0ed, #7a74eaff, var(--primary-color));
     margin-bottom: 2rem;
     min-height: 8rem;
 }
